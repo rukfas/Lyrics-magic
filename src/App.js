@@ -3,6 +3,13 @@ import axios from 'axios';
 
 class App extends Component {
 
+  state = {
+    podatci: [],
+    kralj: {}
+
+  }
+
+
   componentDidMount() {
 
     //axios.defaults.headers.common['apikey'] = 'e4de8d76db968f3f531a30e734222090';
@@ -12,25 +19,30 @@ class App extends Component {
         //q_artist: "Ceca",
         format: "json",
       }
-    })
-      .then(function (response) {
-        console.log(response.data);
-        let myData = response.data
-        console.log(typeof (myData));
-        let dataa = JSON.stringify(myData);
-        let daa = JSON.parse(dataa);
-        console.log(daa);
-      })
-      .catch(function (err) {
-        console.log(err)
+    }).then(response => {
+      this.setState({
+        podatci: response.data.message.body.track_list
       });
+    })
   }
 
+
+
+
   render() {
-    return (
-      <div>
-      </div >
-    );
+    var nesto = this.state.podatci.map(a => {
+      return (<p>{a.track.artist_name}</p>)
+    })
+    if (this.state.podatci.length < 1) {
+      return <p>Loading...</p>
+    } else {
+      return (
+
+        <div>
+          {nesto}
+        </div >
+      );
+    }
   }
 }
 
