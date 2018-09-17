@@ -1,0 +1,11 @@
+.Header ul {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    margin: auto;
+}
+.Header li {
+    display: inline-block;
+    margin: 10px;
+    color: rgb(190, 167, 167);
+}
