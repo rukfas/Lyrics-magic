@@ -10,6 +10,7 @@ class Rutiranje extends Component {
                 <Route path="/About" component={Nebo}></Route>
                 <Route path='/' component={Blog}></Route>
             </Switch>
+
         )
     }
 }

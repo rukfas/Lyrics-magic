@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -9,8 +9,8 @@ class Header extends Component {
                 <header>
                     <nav>
                         <ul>
-                            <Link to='/' ><li>Home</li></Link>
-                            <Link to='/About'>  <li>  About  </li></Link>
+                            <NavLink className="tonbut" activeStyle={{ fontSize: '1.6em' }} to='/' exact >Home</NavLink>
+                            <NavLink to='/About' className='tonbut' activeStyle={{ fontSize: '1.6em' }}>    About  </NavLink>
                             <li>Top List </li>
                         </ul>
                     </nav>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./blog.css";
 
 class Blog extends Component {
 
@@ -17,7 +18,7 @@ class Blog extends Component {
     }
 
     proba() {
-        axios.get(`https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=${this.state.SongText}&page_size=3&page=1&s_track_rating=desc`, {
+        axios.get(`https://api.musixmatch.com/ws/1.1/track.search?q_lyrics=${this.state.SongText}&page_size=10&page=1&s_track_rating=desc`, {
             params: {
                 apikey: 'e4de8d76db968f3f531a30e734222090',
                 //q_artist: "Ceca",
@@ -45,14 +46,14 @@ class Blog extends Component {
     render() {
         console.log(this.state);
         var nesto = this.state.podatci.map(a => {
-            return (<p>{a.track.artist_name}</p>)
+            return (<div className="rezultat"><p>{a.track.artist_name}</p></div>)
         })
         if (this.state.ucitaniPodaci === false) {
             return <p>Loading...</p>
         } else {
             return (
 
-                <div>
+                <div className="Blog">
                     <input type="text" value={this.state.SongText} onChange={this.onChangeHandler.bind(this)}></input>
                     {nesto}
                 </div >

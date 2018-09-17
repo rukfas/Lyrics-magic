@@ -1,0 +1,23 @@
+Body{
+    background-color: rgba(48, 56, 161, 0.164);
+}
+
+
+.rezultat {
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1%;
+    box-shadow: -10px 10px 8px rgba(48, 55, 161, 0.082);
+}
+
+.Blog input {
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 30px;
+    font-size: 2em;
+}

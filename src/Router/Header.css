@@ -1,3 +1,7 @@
+.Header {
+    background-image: url('http://www.bates.edu/wordpress/files/2016/07/gradient2.jpg');
+    padding: 3.5%;
+}
 .Header ul {
     text-align: center;
     list-style: none;
@@ -8,4 +12,14 @@
     display: inline-block;
     margin: 10px;
     color: rgb(190, 167, 167);
+}
+
+
+.tonbut {
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(190, 167, 167);
+    width: 100%;
 }
